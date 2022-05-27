@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=11">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>site</title>
+</head>
+
+<body>
+    <div class="page-container">
+    <header id="header" class="header">
+        <div class="row header__row">
+            <a href="./" class="header__logo onlyMobile">
+                <img src="./images/icons/logo.svg" alt="logo">
+            </a>
+            <nav class="header__nav">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="./#s-rules" class="menu__link js-anchor">
+                            Условия
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./#s-prizes" class="menu__link js-anchor">
+                            Призы
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./#s-winners" class="menu__link js-anchor">
+                            Победители
+                        </a>
+                    </li>
+                    <li class="menu__item onlyDesktope">
+                        <a href="./" class="header__logo">
+                            <img src="./images/icons/logo.svg" alt="logo">
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="./faq.html" class="menu__link js-anchor">
+                            Вопрос-ответ
+                        </a>
+                    </li>
+
+                    <li class="menu__item menu__item--custom">
+                        <!-- <a href="#login" data-popup="#login"  class="btn btn--blue js-popup-open"> -->
+                        <a href="./account.html" class="btn btn--blue">
+                            Личный кабинет
+                        </a>
+                        
+                    </li>
+                    <li class="menu__item onlyMobile">
+                        <a href="" class="header__instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0011 0C8.74209 0 8.33306 0.01425 7.05309 0.0724683C5.77556 0.130968 4.9035 0.333185 4.14056 0.629995C3.35128 0.936461 2.68181 1.34643 2.01478 2.01373C1.34728 2.68067 0.937218 3.35022 0.629718 4.13922C0.33225 4.90243 0.12975 5.77467 0.0722811 7.05173C0.0149998 8.33169 0 8.74099 0 12C0 15.259 0.0145313 15.6667 0.0724688 16.9468C0.13125 18.2243 0.333469 19.0963 0.63 19.8593C0.93675 20.6485 1.34672 21.318 2.01403 21.985C2.68078 22.6525 3.35025 23.0635 4.13906 23.37C4.90256 23.6667 5.77481 23.869 7.05206 23.9275C8.33212 23.9858 8.74087 24 11.9996 24C15.2589 24 15.6667 23.9858 16.9466 23.9275C18.2242 23.869 19.0972 23.6667 19.8607 23.37C20.6497 23.0635 21.3182 22.6525 21.9849 21.985C22.6524 21.318 23.0625 20.6485 23.37 19.8595C23.665 19.0963 23.8675 18.224 23.9275 16.947C23.985 15.667 24 15.259 24 12C24 8.74099 23.985 8.33197 23.9275 7.05201C23.8675 5.77449 23.665 4.90243 23.37 4.1395C23.0625 3.35022 22.6524 2.68067 21.9849 2.01373C21.3174 1.34624 20.6499 0.93618 19.8599 0.629995C19.0949 0.333185 18.2225 0.130968 16.9449 0.0724683C15.6649 0.01425 15.2574 0 11.9974 0H12.0011ZM11.6009 2.16233H11.6012L12.0011 2.16242C15.2051 2.16242 15.5849 2.17395 16.8502 2.23142C18.0202 2.28495 18.6552 2.48042 19.0782 2.64467C19.6382 2.86217 20.0375 3.12223 20.4572 3.54222C20.8772 3.96222 21.1372 4.36225 21.3552 4.92221C21.5195 5.34474 21.7152 5.9797 21.7685 7.14969C21.8259 8.41475 21.8385 8.79471 21.8385 11.9973C21.8385 15.1998 21.8259 15.5797 21.7685 16.8448C21.7149 18.0148 21.5195 18.6497 21.3552 19.0723C21.1377 19.6322 20.8772 20.031 20.4572 20.4507C20.0372 20.8707 19.6385 21.1308 19.0782 21.3483C18.6557 21.5133 18.0202 21.7083 16.8502 21.7617C15.5852 21.8193 15.2051 21.8318 12.0011 21.8318C8.79684 21.8318 8.41706 21.8193 7.15209 21.7617C5.98209 21.7077 5.34703 21.5123 4.92384 21.348C4.36378 21.1305 3.96375 20.8705 3.54375 20.4505C3.12375 20.0305 2.86378 19.6315 2.64581 19.0712C2.48156 18.6488 2.28581 18.0137 2.23256 16.8437C2.175 15.5788 2.16356 15.1987 2.16356 11.9943C2.16356 8.78974 2.175 8.41175 2.23256 7.14669C2.286 5.9767 2.48156 5.34174 2.64581 4.91874C2.86331 4.35868 3.12375 3.95875 3.54375 3.53875C3.96375 3.11876 4.36378 2.8587 4.92384 2.64073C5.34684 2.47573 5.98209 2.28073 7.15209 2.22692C8.25909 2.17695 8.68809 2.16195 10.9246 2.15942V2.16242C11.1336 2.16214 11.3584 2.16223 11.6009 2.16233ZM16.9667 5.59449C16.9667 4.79921 17.6117 4.15497 18.4067 4.15497V4.1545C19.2017 4.1545 19.8467 4.79949 19.8467 5.59449C19.8467 6.38948 19.2017 7.03448 18.4067 7.03448C17.6117 7.03448 16.9667 6.38948 16.9667 5.59449ZM12.0008 5.83749C8.59772 5.83758 5.83856 8.59681 5.83856 12C5.83856 15.4033 8.59781 18.1613 12.0011 18.1613C15.4044 18.1613 18.1627 15.4033 18.1627 12C18.1627 8.59671 15.4042 5.83749 12.0008 5.83749ZM16.0012 12C16.0012 9.7907 14.2102 8 12.0011 8C9.79181 8 8.00109 9.7907 8.00109 12C8.00109 14.209 9.79181 16 12.0011 16C14.2102 16 16.0012 14.209 16.0012 12Z" fill="white"/>
+</svg>
+    
+                        </a>
+                        <a href="" class="header__allpromo">
+                            К списку акций
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="js-open-menu open-menu-btn"></button>
+        </div>
+    </header>
+    
+    <main class="main">
+<div class="game-page-container">
+    <section class="s-game">
+        <div class="s-decor">
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+        <div class="s-container">
+            <div class="s-game__block">
+                <div class="question__block">
+                    <div class="question__decor" style="background-image: url('./images/game/it.png');"></div>
+                    <div class="question__block-start js-question-block-start">
+                        <div class="question__num">
+                            <span class="js-current-num-question"></span>/<span class="js-all-num-question"></span>
+                        </div>
+                        <div class="question__text"></div>
+                    </div>
+                    <div class="question__block-wrong js-question-block-wrong">
+                        <h2>
+                            попробуйте еще!
+                        </h2>
+                        <button class="question__block-repeat js-btn-quetsion-repeat">
+                            Показать вопрос
+                        </button>
+                    </div>
+                    <div class="question__block-correct js-question-block-correct">
+                        <h2>
+                            Ответ верный!
+                        </h2>
+                    </div>
+                </div>
+                <div class="answer__block">
+                    <div class="answer__list answer__list--start js-answer-list-start">
+                    
+                        <a href="#" class="answer__item js-answer-item">
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                        <a href="#" class="answer__item js-answer-item">
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                        <a href="#" class="answer__item js-answer-item">
+                            <h3></h3>
+                            <p></p>
+                        </a>
+                    </div>
+                    <div class="answer__list answer__list--correct js-answer-list-correct">
+                        <div class="answer__item choiced">
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        <a href="#" class="btn btn--yellow js-next-question">
+                            СЛедующий вопрос
+                        </a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+</div>
+    </main>
+    <footer class="footer">
+        <div class="s-decor">
+            <i></i>
+            <i></i>
+        </div>
+        <div class="footer__row">
+          <div class="footer__top">
+              <div class="footer__top-leftside">
+                    <a href="#feedback" data-popup="#feedback" class="footer__link js-popup-open">
+                        Обратная связь
+                    </a>
+                    <a href="" class="footer__link">
+                        Правила
+                    </a>
+                    <a href="" class="footer__link">
+                        политика конфиденциальности
+                    </a>
+              </div>
+              <div class="footer__top-rightside">
+                    <a href="" class="footer__instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0011 0C8.74209 0 8.33306 0.01425 7.05309 0.0724683C5.77556 0.130968 4.9035 0.333185 4.14056 0.629995C3.35128 0.936461 2.68181 1.34643 2.01478 2.01373C1.34728 2.68067 0.937218 3.35022 0.629718 4.13922C0.33225 4.90243 0.12975 5.77467 0.0722811 7.05173C0.0149998 8.33169 0 8.74099 0 12C0 15.259 0.0145313 15.6667 0.0724688 16.9468C0.13125 18.2243 0.333469 19.0963 0.63 19.8593C0.93675 20.6485 1.34672 21.318 2.01403 21.985C2.68078 22.6525 3.35025 23.0635 4.13906 23.37C4.90256 23.6667 5.77481 23.869 7.05206 23.9275C8.33212 23.9858 8.74087 24 11.9996 24C15.2589 24 15.6667 23.9858 16.9466 23.9275C18.2242 23.869 19.0972 23.6667 19.8607 23.37C20.6497 23.0635 21.3182 22.6525 21.9849 21.985C22.6524 21.318 23.0625 20.6485 23.37 19.8595C23.665 19.0963 23.8675 18.224 23.9275 16.947C23.985 15.667 24 15.259 24 12C24 8.74099 23.985 8.33197 23.9275 7.05201C23.8675 5.77449 23.665 4.90243 23.37 4.1395C23.0625 3.35022 22.6524 2.68067 21.9849 2.01373C21.3174 1.34624 20.6499 0.93618 19.8599 0.629995C19.0949 0.333185 18.2225 0.130968 16.9449 0.0724683C15.6649 0.01425 15.2574 0 11.9974 0H12.0011ZM11.6009 2.16233H11.6012L12.0011 2.16242C15.2051 2.16242 15.5849 2.17395 16.8502 2.23142C18.0202 2.28495 18.6552 2.48042 19.0782 2.64467C19.6382 2.86217 20.0375 3.12223 20.4572 3.54222C20.8772 3.96222 21.1372 4.36225 21.3552 4.92221C21.5195 5.34474 21.7152 5.9797 21.7685 7.14969C21.8259 8.41475 21.8385 8.79471 21.8385 11.9973C21.8385 15.1998 21.8259 15.5797 21.7685 16.8448C21.7149 18.0148 21.5195 18.6497 21.3552 19.0723C21.1377 19.6322 20.8772 20.031 20.4572 20.4507C20.0372 20.8707 19.6385 21.1308 19.0782 21.3483C18.6557 21.5133 18.0202 21.7083 16.8502 21.7617C15.5852 21.8193 15.2051 21.8318 12.0011 21.8318C8.79684 21.8318 8.41706 21.8193 7.15209 21.7617C5.98209 21.7077 5.34703 21.5123 4.92384 21.348C4.36378 21.1305 3.96375 20.8705 3.54375 20.4505C3.12375 20.0305 2.86378 19.6315 2.64581 19.0712C2.48156 18.6488 2.28581 18.0137 2.23256 16.8437C2.175 15.5788 2.16356 15.1987 2.16356 11.9943C2.16356 8.78974 2.175 8.41175 2.23256 7.14669C2.286 5.9767 2.48156 5.34174 2.64581 4.91874C2.86331 4.35868 3.12375 3.95875 3.54375 3.53875C3.96375 3.11876 4.36378 2.8587 4.92384 2.64073C5.34684 2.47573 5.98209 2.28073 7.15209 2.22692C8.25909 2.17695 8.68809 2.16195 10.9246 2.15942V2.16242C11.1336 2.16214 11.3584 2.16223 11.6009 2.16233ZM16.9667 5.59449C16.9667 4.79921 17.6117 4.15497 18.4067 4.15497V4.1545C19.2017 4.1545 19.8467 4.79949 19.8467 5.59449C19.8467 6.38948 19.2017 7.03448 18.4067 7.03448C17.6117 7.03448 16.9667 6.38948 16.9667 5.59449ZM12.0008 5.83749C8.59772 5.83758 5.83856 8.59681 5.83856 12C5.83856 15.4033 8.59781 18.1613 12.0011 18.1613C15.4044 18.1613 18.1627 15.4033 18.1627 12C18.1627 8.59671 15.4042 5.83749 12.0008 5.83749ZM16.0012 12C16.0012 9.7907 14.2102 8 12.0011 8C9.79181 8 8.00109 9.7907 8.00109 12C8.00109 14.209 9.79181 16 12.0011 16C14.2102 16 16.0012 14.209 16.0012 12Z" fill="white"/>
+</svg>
+    
+                    </a>
+                    <a href="" class="footer__allpromo">
+                        К списку акций
+                    </a>
+              </div>
+          </div>
+          <div class="footer__decor"></div>
+          <div class="footer__bottom">
+              <p>
+                Период приобретения товаров с 07.02.2022 г. по 06.03.2022 г. включительно во всех магазинах «Пятёрочка» на территории РФ.  В акции участвуют любые продукты под товарным знаком Простоквашино. Организатором Акции является ООО «Данон Трейд». Период вручения призов победителям акции с 07.02.2022 г. до 31.03.2022 г. С информацией об организаторе, правилах Акции с сроках ее проведения, количестве призов или выигрышей по результатам акции, месте и порядке их получения можно подробнее ознакомиться по адресу maslenitsa.prostokvashino.ru. Призы могут отличаться внешне от изображенных на макете.
+              </p>
+          </div>
+        </div>
+    </footer>
+
+
+    <div class="popup">
+
+    <div id="message-popup" class="popup-message popup__window">
+        <button class="js-popup-close popup-close-btn"></button>
+        <div class="popup__inner ta-c">
+            <div class="popup__title">
+                <!-- message html -->
+            </div>
+            <div class="popup__span"></div>
+        </div>
+    </div>
+
+    <div id="comming_soon" class="popup__window">
+        <button class="js-popup-close popup-close-btn"></button>
+        <div class="popup__inner">
+            <div class="popup__title">
+                Эта страница находится в разработке
+            </div>
+        </div>
+    </div>
+
+    <div id="registration" class="popup__window">
+        <button class="js-popup-close popup-close-btn"></button>
+        <div class="popup__inner">
+            <div class="popup__title">
+                Регистрация
+            </div>
+            <form class="form" enctype="multipart/form-data" id="form-registration" autocomplete="off" action="">
+                <!-- <div class="form__loader">
+                    <img src="./img/icons/loading.svg" alt="loading">
+                </div> -->
+                <div class="form__field">
+                    <label for="registration-firstname" class="form__text-label">Имя</label>
+                    <input id="registration-firstname" type="text" data-type="name" data-required="true"
+                        name="firstname" class="form__text-input" autocomplete="off" placeholder="Имя">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="form__field">
+                    <label for="registration-lastname" class="form__text-label">Фамилия</label>
+                    <input id="registration-lastname" type="text" data-type="name" data-required="true" name="lastname"
+                        class="form__text-input" autocomplete="off" placeholder="Фамилия">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="form__field">
+                    <label for="registration-email" class="form__text-label">Email</label>
+                    <input id="registration-email" type="text" data-type="email" data-required="true" name="email"
+                        class="form__text-input" autocomplete="off" placeholder="Email">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="form__field-vbtn">
+                    <div class="form__field">
+                        <label for="registration-phone" class="form__text-label">Номер телефона</label>
+                        <input id="registration-phone" type="text" data-type="tel" data-required="true" name="phone"
+                            class="form__text-input" autocomplete="off" placeholder="Номер телефона">
+                        <div class="field-error-tip">
+                            Обязательное поле
+                        </div>
+                    </div>
+                    <button class="btn btn--yellow" type="button">
+                        Подтвердить
+                    </button>
+                </div>
+                <div class="form__field form__field-vbtn">
+                    <div class="form__field">
+                        <label for="registration-code" class="form__text-label">На ваш номер +7 900 000 00 00 был отправлен код</label>
+                        <input id="registration-code" type="text" data-type="num" data-required="true" name="code"
+                        class="form__text-input" autocomplete="off" placeholder="Введите код из смс">
+                        <div class="field-error-tip">
+                            Обязательное поле
+                        </div>
+                    </div>
+                    <button class="btn btn--yellow" type="button">
+                        Подтвердить
+                    </button>
+                </div>
+                <div class="form__field">
+                    <label for="registration-password" class="form__text-label">Пароль</label>
+                    <input id="registration-password" type="password" data-type="pass" data-required="true"
+                        name="password" data-min-length="6" class="form__text-input" autocomplete="off"
+                        placeholder="Пароль">
+                    <div class="field-error-tip" data-error-text-2="Минимум 6 символов">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="form__field">
+                    <label for="registration-password--confirm" class="form__text-label">Подтвердите
+                        пароль</label>
+                    <input id="registration-password--confirm" type="password" data-type="pass" data-required="true"
+                        name="password2" data-pass-compare-input="#registration-password" class="form__text-input"
+                        autocomplete="off" placeholder="Подтвердите пароль">
+                    <div class="field-error-tip" data-error-text-2="Пароль не совпадает">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="form__field custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__input" data-required="true">
+                    <label class="custom-checkbox__label">
+                        Принимаю Условия, Политику использования данных и Политику
+                        в отношении файлов cookie.
+                    </label>
+                    <div class="field-error-tip field-error-tip_checkbox"
+                        data-error-text-2="Вы должны принять условия сервиса">
+                        Вы должны принять условия сервиса
+                    </div>
+                </div>
+                <div class="form__field custom-checkbox">
+                    <input type="checkbox" class="custom-checkbox__input" data-required="true">
+                    <label class="custom-checkbox__label">
+                        Принимаю Условия, Политику использования данных и Политику
+                        в отношении файлов cookie.
+                    </label>
+                    <div class="field-error-tip field-error-tip_checkbox"
+                        data-error-text-2="Вы должны принять условия сервиса">
+                        Вы должны принять условия сервиса
+                    </div>
+                </div>
+                <div class="popup__controlls ">
+                    <button type="submit" class="btn" disabled>Зарегистрироваться</button>
+                    <p>
+                        Уже есть аккаунт? <a href="#login" data-popup="#login" class="js-popup-open popup__controlls-link">Войти</a>
+                    </p>
+                </div>
+                <div class="form-error-tip">Ошибка заполнения полей формы</div>
+            </form>
+        </div>
+    </div>
+
+    <div id="reg-confirm" class="popup__window">
+        <button class="js-popup-close popup-close-btn"></button>
+        <div class="popup__inner">
+            <div class="popup__title">
+                Регистрация
+            </div>
+            <form class="form" enctype="multipart/form-data" id="form-reg-confirm" autocomplete="off" action="">
+                <!-- <div class="form__loader">
+                    <img src="./img/icons/loading.svg" alt="loading">
+                </div> -->
+                <div class="popup__description">
+                    <p>
+                        На ваш номер <span>+7 900 000 00 00</span> был отправлен код
+                    </p>
+                </div>
+                <div class="form__field">
+                    <label for="reg-confirm-code" class="form__text-label">Проверочный код из СМС</label>
+                    <input id="reg-confirm-code" type="text" data-type="num" data-required="true" name="code"
+                        class="form__text-input" autocomplete="off" placeholder="">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+
+                <div class="popup__controlls ">
+                    <button type="submit" class="btn">Подтвердить</button>
+                    <p>
+                        <a href="#" class="popup__controlls-link">Отправить код повторно через <span>50 сек.</span></a>
+                    </p>
+                    <p>
+                        <a href="#registration" data-popup="#registration" class="js-popup-open popup__controlls-link">Назад</a>
+                    </p>
+                </div>
+                <div class="form-error-tip">Ошибка заполнения полей формы</div>
+            </form>
+        </div>
+    </div>
+
+    <div id="login" class="popup__window">
+        <button class="js-popup-close popup-close-btn"></button>
+        <div class="popup__inner">
+            <div class="popup__title">
+                Авторизация
+            </div>
+            <form class="form" enctype="multipart/form-data" id="form-login" autocomplete="off" action="">
+                <!-- <div class="form__loader">
+                    <img src="./img/icons/loading.svg" alt="loading">
+                </div> -->
+
+                <div class="form__field">
+                    <label for="login-email" class="form__text-label">Email</label>
+                    <input id="login-email" type="text" data-type="email" data-required="true" name="email"
+                        class="form__text-input" autocomplete="off" placeholder="Email">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="form__field">
+                    <label for="login-password" class="form__text-label">Пароль</label>
+                    <input id="login-password" type="password" data-type="pass" data-required="true" name="password"
+                        data-min-length="6" class="form__text-input" autocomplete="off" placeholder="Пароль">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+                <a href="#recovery" data-popup="#recovery" class="js-popup-open popup__recovery-link popup__controlls-link">Забыли пароль?</a>
+
+                <div class="popup__controlls ">
+                    <button type="submit" class="btn">Войти</button>
+                    <p>
+                        Нет аккаунта? <a href="#registration" data-popup="#registration"
+                            class="js-popup-open">Зарегистрируйтесь</a>
+                    </p>
+                </div>
+                <div class="form-error-tip">Ошибка заполнения полей формы</div>
+            </form>
+        </div>
+    </div>
+
+    <div id="recovery" class="popup__window">
+        <button class="js-popup-close popup-close-btn"></button>
+        <div class="popup__inner">
+            <div class="popup__title">
+                Восстановление пароля
+            </div>
+            <form class="form" enctype="multipart/form-data" id="form-recovery" autocomplete="off" action="">
+                <!-- <div class="form__loader">
+                    <img src="./img/icons/loading.svg" alt="loading">
+                </div> -->
+                <div class="popup__description">
+                    <p>
+                        Введите ваш e-mail для восстановления пароля
+                    </p>
+                </div>
+                <div class="form__field">
+                    <label for="recovery-email" class="form__text-label">Email</label>
+                    <input id="recovery-email" type="text" data-type="email" data-required="true" name="email"
+                        class="form__text-input" autocomplete="off" placeholder="Email">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+
+                <div class="popup__controlls ">
+                    <button type="submit" class="btn">Восстановить</button>
+                </div>
+                <div class="form-error-tip">Ошибка заполнения полей формы</div>
+            </form>
+        </div>
+    </div>
+
+    <div id="feedback" class="popup__window">
+        <button class="js-popup-close popup-close-btn"></button>
+        <div class="popup__inner">
+            <div class="popup__title">
+                Обратная связь
+            </div>
+            <form class="form" enctype="multipart/form-data" id="form-feedback" autocomplete="off" action="">
+                <!-- <div class="form__loader">
+                    <img src="./img/icons/loading.svg" alt="loading">
+                </div> -->
+                <div class="form__field">
+                    <label for="feedback-firstname" class="form__text-label">Имя</label>
+                    <input id="feedback-firstname" type="text" data-type="name" data-required="true" name="firstname"
+                        class="form__text-input" autocomplete="off" placeholder="Имя">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="form__field">
+                    <label for="feedback-email" class="form__text-label">Email</label>
+                    <input id="feedback-email" type="text" data-type="email" data-required="true" name="email"
+                        class="form__text-input" autocomplete="off" placeholder="Email">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="form__field">
+                    <label for="feedback-message" class="form__text-label">Сообщение</label>
+                    <textarea id="feedback-message" data-required="true" name="message" class="form__textarea"
+                        placeholder="Введите текст обращения"></textarea>
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+                <div class="popup__controlls ">
+                    <button type="submit" class="btn">ОТправить</button>
+                </div>
+                <div class="form-error-tip">Ошибка заполнения полей формы</div>
+            </form>
+        </div>
+    </div>
+
+    <div id="card-reg" class="popup__window">
+        <button class="js-popup-close popup-close-btn"></button>
+        <div class="popup__inner">
+            <div class="popup__title">
+                Регистрация карты
+            </div>
+            <form class="form" enctype="multipart/form-data" id="form-card-reg" autocomplete="off" action="">
+                <!-- <div class="form__loader">
+                    <img src="./img/icons/loading.svg" alt="loading">
+                </div> -->
+                <div class="popup__description">
+                    <p>
+                        Введине номер вашей карты «Копилка»
+                    </p>
+                </div>
+                <div class="form__field">
+                    <input id="card-number" type="text" data-type="num" data-required="true" name="card-number"
+                        class="form__text-input" autocomplete="off" placeholder="Номер карты">
+                    <div class="field-error-tip">
+                        Обязательное поле
+                    </div>
+                </div>
+
+                <div class="popup__controlls ">
+                    <button type="submit" class="btn">Зарегистрировать</button>
+                </div>
+                <div class="form-error-tip">Ошибка заполнения полей формы</div>
+            </form>
+        </div>
+    </div>
+
+    <div id="check-upload" class="popup__window">
+        <button class="js-popup-close popup-close-btn"></button>
+        <div class="popup__inner">
+            <div class="popup__title">
+                Загрузка чека
+            </div>
+
+            <form class="form no-file-uploaded" id="form-check-upload" autocomplete="off" action="">
+                <!-- <div class="form__loader">
+                    <img src="./img/icons/loading.svg" alt="loading">
+                </div> -->
+
+                <div class="check-upload__block js-check-upload-block">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form__field">
+                                <div class="custom-file">
+                                    <div class="custom-file__items-wrap">
+                                        <div class="custom-file__items">
+
+                                        </div>
+                                    </div>
+                                    <input id="download-photo" type="file" data-ext="jpg,jpeg,png,gif"
+                                        data-max-size="10000000" data-required="true" class="custom-file__input">
+                                    <label for="download-photo" class="custom-file__lab">
+                                        <img src="./images/icons/upload.svg" alt="upload">
+                                        <p>
+                                            Перетащите файл сюда или <br>
+                                            <span>Выберите файл</span>
+                                        </p>
+                                    </label>
+                                </div>
+                                <div class="field-error-tip ta-c no-float"
+                                    data-error-text-2="Загрузите изображения (jpg, png, gif)"
+                                    data-error-text-3="Загрузите файлы меньше 10Mб"
+                                    data-error-text-4="За раз можно загрузить 1 чек">
+                                    Загрузите файлы
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__controlls ">
+                        <button type="submit" class="btn">Загрузить</button>
+                        <p class="">
+                            <label for="download-photo" class="popup__controlls-link">
+                                Выбрать другой файл
+                            </label>
+                        </p>
+                    </div>
+                </div>
+                <div class="form-error-tip">Ошибка заполнения полей формы</div>
+            </form>
+        </div>
+    </div>
+    <div id="pancake-it" class="popup__window popup__pancake">
+    <button class="js-popup-close popup-close-btn"></button>
+    <div class="pancake__inner">
+        <div class="pancake__recipe">
+            <div class="pancake__recipe-leftside">
+                <div class="pancake__title">
+                    <h2>
+                        Блины италии
+                    </h2>
+                </div>
+                <div class="pancake__subtitle">
+                    <h3>
+                        Креспелле по-флорентийски
+                    </h3>
+                </div>
+                <div class="pancake__ingredients">
+                    <div class="pancake__ingredients-block">
+                        <div class="pancake__ingredients-title">
+                            <h4>
+                                Тесто для блинов:
+                            </h4>
+                        </div>
+                        <ul class="pancake__ingredients-list">
+                            <li>
+                                Пшеничная мука — 200 г
+                            </li>
+                            <li>
+                                Молоко «Простоквашино» 3,2% — 400 мл
+                            </li>
+                            <li>
+                                Яйца куриные — 4 шт.
+                            </li>
+                            <li>
+                                Сливочное масло «Простоквашино» — 33 г
+                            </li>
+                            <li>
+                                Соль морская — 1 щепотка
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pancake__ingredients-block">
+                        <div class="pancake__ingredients-title">
+                            <h4>
+                                Начинка:
+                            </h4>
+                        </div>
+                        <ul class="pancake__ingredients-list">
+                            <li>
+                                Рикотта — 390 г
+                            </li>
+                            <li>
+                                Пармезан — 4 ст. л.
+                            </li>
+                            <li>
+                                Шпинат — 120 г
+                            </li>
+                            <li>
+                                Петрушка — 2 веточки
+                            </li>
+                            <li>
+                                Мускатный орех молотый — 1 щепотка
+                            </li>
+                            <li>
+                                Перец белый свежемолотый — ⅕ ч. л.
+                            </li>
+                            <li>
+                                Соль морская — 2 щепотки
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pancake__ingredients-block">
+                        <div class="pancake__ingredients-title">
+                            <h4>
+                                Соус Бешамель:
+                            </h4>
+                        </div>
+                        <ul class="pancake__ingredients-list">
+                            <li>
+                                Сливочное масло «Простоквашино» — 55 г
+                            </li>
+                            <li>
+                                Пшеничная мука — 55 г
+                            </li>
+                            <li>
+                                Молоко «Простоквашино» 3,2% — 550 г
+                            </li>
+                            <li>
+                                Соль морская — 1 щепотка
+                            </li>
+                            <li>
+                                Мускатный орех молотый — 1 щепотка
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pancake__ingredients-block">
+                        <div class="pancake__ingredients-title">
+                            <h4>
+                                Для обжаривания и смазывания блинов:
+                            </h4>
+                        </div>
+                        <ul class="pancake__ingredients-list">
+                            <li>
+                                Сливочное масло «Простоквашино» — 20 г  
+                            </li>
+                            <li>
+                                Оливковое масло — 20 г
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pancake__recipe-rightside">
+                <div class="pancake__recipe-image">
+                    <img src="./images/pancakes/it.png" alt="it">
+                </div>
+                <div class="pancake__recipe-decor"></div>
+            </div>
+        </div>
+        <div class="pancake__steps">
+            <div class="pancake__steps-header">
+                <p>
+                    Процесс приготовления
+                </p>
+                <button>
+                   <span>
+                    Развернуть
+                   </span>  
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.93934 7.43934C2.52513 6.85355 3.47487 6.85355 4.06066 7.43934L12 15.3787L19.9393 7.43934C20.5251 6.85355 21.4749 6.85355 22.0607 7.43934C22.6464 8.02513 22.6464 8.97487 22.0607 9.56066L13.0607 18.5607C12.4749 19.1464 11.5251 19.1464 10.9393 18.5607L1.93934 9.56066C1.35355 8.97487 1.35355 8.02513 1.93934 7.43934Z" fill="#FFB620"/>
+    </svg>
+    
+                </button>
+            </div>
+            <div class="pancake__steps-body">
+                <ol class="pancake__steps-list">
+                    <li>
+                        Муку с солью просеять. Сливочное масло растопить. Смешать 2 яйца с мукой, добавить совсем
+                        немного молока, перемешать венчиком, чтобы не было комков. Затем добавить еще 2 яйца, перемешать
+                        венчиком. Добавить оставшееся молоко, и снова перемешать.
+                    </li>
+                    <li>
+                       Добавить масло, перемешать, убрать всё в холодильник на 30 минут.
+                    </li>
+                    <li>
+                        Достаём тесто из холодильника. Жарим блинчики с двух сторон на хорошо разогретой сковороде,
+                        смазанной оливковым маслом.
+                    </li>
+                    <li>
+                        Готовые блины поместить на водяную баню. Слегка промазать блины сливочным маслом. Форму тоже
+                        смазать сливочным маслом или подойдёт соус бешамель (примерно 3 ст. л.). О его приготовлении
+                        ниже.
+                    </li>
+                    <li>
+                        Начинка: рикотту поместить в большую миску. Пармезан натереть на мелкой терке. К рикотте
+                        добавить пармезан, посолить, поперчить, добавить мускатный орех. Шпинат бланшировать 2–3 минуты,
+                        откинуть на сито, дать немного остыть, хорошо отжать руками, нарезать, добавить к начинке.
+                        Нарезать мелко петрушку и добавить. Перемешать.
+                    </li>
+                    <li>
+                        Готовим соус бешамель. Растопить на сковороде сливочное масло, добавить муку, перемешать.
+                        Добавить молоко постепенно, струйкой, тщательно перемешивая смесь. Добавить мускатный орех,
+                        соль.
+                    </li>
+                    <li>
+                        Готовить на небольшом огне, помешивая смесь, чтобы не было комков, а соус загустел. Дать
+                        соусу немного остыть, протереть через сито, тогда соус будет однородный, атласный.
+                    </li>
+                    <li>
+                        Кладём начинку на блин и заворачиваем его. Заливаем всё соусом Бешамель и кладём в духовку на
+                        20 минут и разогреваем на 180°C.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pancake-en" class="popup__window popup__pancake">
+    <button class="js-popup-close popup-close-btn"></button>
+    <div class="pancake__inner">
+        <div class="pancake__recipe">
+            <div class="pancake__recipe-leftside">
+                <div class="pancake__title">
+                    <h2>
+                        Блины Англии
+                    </h2>
+                </div>
+                <div class="pancake__subtitle">
+                    <h3>
+                        Классический Панкейк
+                    </h3>
+                </div>
+                <div class="pancake__ingredients">
+                    <div class="pancake__ingredients-block">
+                        <div class="pancake__ingredients-title">
+                            <h4>
+                                Ингридиенты:
+                            </h4>
+                        </div>
+                        <ul class="pancake__ingredients-list">
+                            <li>
+                                Мука — 225 г
+                            </li>
+                            <li>
+                                Яйцо — 2 шт
+                            </li>
+                            <li>
+                                Сахар — 3 ч.л
+                            </li>
+                            <li>
+                                Соль — 2 щепотка
+                            </li>
+                            <li>
+                                Молоко «Простоквашино» (холодное) — 230 мл 
+                            </li>
+                            <li>
+                                Растительное масло — 2 ч.л.
+                            </li>
+                            <li>
+                                Сливочное масло «Простоквашино» — 30 г
+                            </li>
+                            <li>
+                                Лимон — 1 шт
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pancake__recipe-rightside">
+                <div class="pancake__recipe-image">
+                    <img src="./images/pancakes/it.png" alt="it">
+                </div>
+                <div class="pancake__recipe-decor"></div>
+            </div>
+        </div>
+        <div class="pancake__steps">
+            <div class="pancake__steps-header">
+                <p>
+                    Процесс приготовления
+                </p>
+                <button>
+                   <span>
+                    Развернуть
+                   </span>  
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.93934 7.43934C2.52513 6.85355 3.47487 6.85355 4.06066 7.43934L12 15.3787L19.9393 7.43934C20.5251 6.85355 21.4749 6.85355 22.0607 7.43934C22.6464 8.02513 22.6464 8.97487 22.0607 9.56066L13.0607 18.5607C12.4749 19.1464 11.5251 19.1464 10.9393 18.5607L1.93934 9.56066C1.35355 8.97487 1.35355 8.02513 1.93934 7.43934Z" fill="#FFB620"/>
+    </svg>
+    
+                </button>
+            </div>
+            <div class="pancake__steps-body">
+                <ol class="pancake__steps-list">
+                    <li>
+                        Муку с солью просеять. Сливочное масло растопить. Смешать 2 яйца с мукой, добавить совсем
+                        немного молока, перемешать венчиком, чтобы не было комков. Затем добавить еще 2 яйца, перемешать
+                        венчиком. Добавить оставшееся молоко, и снова перемешать.
+                    </li>
+                    <li>
+                       Добавить масло, перемешать, убрать всё в холодильник на 30 минут.
+                    </li>
+                    <li>
+                        Достаём тесто из холодильника. Жарим блинчики с двух сторон на хорошо разогретой сковороде,
+                        смазанной оливковым маслом.
+                    </li>
+                    <li>
+                        Готовые блины поместить на водяную баню. Слегка промазать блины сливочным маслом. Форму тоже
+                        смазать сливочным маслом или подойдёт соус бешамель (примерно 3 ст. л.). О его приготовлении
+                        ниже.
+                    </li>
+                    <li>
+                        Начинка: рикотту поместить в большую миску. Пармезан натереть на мелкой терке. К рикотте
+                        добавить пармезан, посолить, поперчить, добавить мускатный орех. Шпинат бланшировать 2–3 минуты,
+                        откинуть на сито, дать немного остыть, хорошо отжать руками, нарезать, добавить к начинке.
+                        Нарезать мелко петрушку и добавить. Перемешать.
+                    </li>
+                    <li>
+                        Готовим соус бешамель. Растопить на сковороде сливочное масло, добавить муку, перемешать.
+                        Добавить молоко постепенно, струйкой, тщательно перемешивая смесь. Добавить мускатный орех,
+                        соль.
+                    </li>
+                    <li>
+                        Готовить на небольшом огне, помешивая смесь, чтобы не было комков, а соус загустел. Дать
+                        соусу немного остыть, протереть через сито, тогда соус будет однородный, атласный.
+                    </li>
+                    <li>
+                        Кладём начинку на блин и заворачиваем его. Заливаем всё соусом Бешамель и кладём в духовку на
+                        20 минут и разогреваем на 180°C.
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/slick.js"></script>
+    <script src="./js/mCustomScrollbar.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/game.js"></script>
+</div>
+    
+    </body>
+
+    </html>
